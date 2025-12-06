@@ -1,0 +1,120 @@
+/* ---------- Variables ---------- */
+:root{
+  --bg: #f5f5f5;
+  --muted: #6b7280;
+  --accent: #1e3a8a;
+  --card-bg: #ffffff;
+  --contrast-bg: #f0f4ff;
+  --radius: 12px;
+  --shadow: 0 6px 20px rgba(16,24,40,0.08);
+  --text: #0f172a;
+}
+
+/* ---------- Reset & base ---------- */
+*{box-sizing:border-box}
+body{
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- Header ---------- */
+.site-header{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  padding:16px 28px;
+  background:var(--accent);
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+.site-header .brand{font-weight:700;font-size:18px}
+.site-nav{margin-left:20px;display:flex;gap:14px;flex:1}
+.site-nav a{color:white;text-decoration:none;padding:8px;border-radius:8px}
+.site-nav a:hover{background:rgba(255,255,255,0.06)}
+.controls{display:flex;gap:8px;align-items:center}
+.icon-btn{background:transparent;border:none;color:white;cursor:pointer;font-size:18px;padding:8px;border-radius:8px}
+
+/* ---------- Hero ---------- */
+.hero{
+  padding:72px 28px;
+  text-align:center;
+  background:linear-gradient(90deg,#111827,#0b1220);
+  color:white;
+}
+.hero h1{font-size:36px;margin-bottom:10px}
+.hero .subtitle{color:rgba(255,255,255,0.85);max-width:860px;margin:0 auto}
+
+/* ---------- Sections ---------- */
+.section{padding:56px 28px}
+h2{text-align:center;margin-bottom:22px;font-size:26px}
+
+/* ---------- Grid & Cards ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.grid.small{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.card{
+  background:var(--card-bg);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow);
+  min-height:120px;
+}
+
+/* ---------- Stat cards ---------- */
+.stat-card{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px}
+.stat-card strong{font-size:28px;color:var(--accent);margin-bottom:6px}
+
+/* ---------- Contrast background for alternate sections ---------- */
+.section-contrast{background:var(--contrast-bg)}
+
+/* ---------- Charts ---------- */
+.chart-wrap{max-width:880px;margin:18px auto 0;}
+
+/* ---------- Quiz ---------- */
+.quiz-card ol{padding-left:18px}
+.quiz-actions{display:flex;gap:10px;margin-top:12px}
+.quiz-card button{padding:10px 14px;background:var(--accent);color:white;border:none;border-radius:8px;cursor:pointer}
+
+/* ---------- Contact ---------- */
+form label{display:block;margin-bottom:8px;color:var(--muted);font-size:14px}
+input,select,textarea{
+  display:block;
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e6e9ef;
+  margin-bottom:14px;
+  font-size:14px;
+  background:white;
+}
+.form-actions{display:flex;gap:10px}
+#downloadTemplate{background:transparent;border:1px solid var(--accent);color:var(--accent);padding:10px;border-radius:8px;cursor:pointer}
+
+/* ---------- Footer ---------- */
+.site-footer{padding:18px;text-align:center;background:var(--accent);color:white;}
+
+/* ---------- Dark Mode (class applied to body by JS) ---------- */
+body.dark-mode{
+  --bg:#08101a;
+  --card-bg:#0c1318;
+  --contrast-bg:#071223;
+  --text:#e6eef8;
+  --muted:#9aa4b2;
+}
+body.dark-mode .site-header{background:#0b1220}
+body.dark-mode input, body.dark-mode select, body.dark-mode textarea{
+  background:#07111a;border:1px solid rgba(255,255,255,0.06);color:var(--text)
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width:760px){
+  .site-header{flex-wrap:wrap;padding:12px}
+  .site-nav{order:3;width:100%;gap:8px;overflow:auto}
+  .hero{padding:48px 20px}
+  .section{padding:28px 18px}
+}
