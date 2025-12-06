@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Adoption & Talent Shortage</title>
+
+  <!-- Chart.js (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <!-- Icons (used in cards) -->
+  <!-- You can replace these with local assets if preferred -->
+  <link rel="preconnect" href="https://img.icons8.com" crossorigin>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">AI Talent Gap</div>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#meaning">Meaning</a>
+      <a href="#causes">Causes</a>
+      <a href="#impact">Impact</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#charts">Charts</a>
+      <a href="#case">Case Study</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="controls">
+      <button id="darkToggle" class="icon-btn" aria-pressed="false" title="Toggle dark mode">🌙</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>AI Adoption is Slowed by Talent Shortage</h1>
+    <p class="subtitle">Explore what AI adoption means, why talent gaps exist, their impact, and practical solutions to accelerate adoption.</p>
+  </section>
+
+  <!-- MEANING -->
+  <section id="meaning" class="section">
+    <h2>What AI Adoption Means</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://img.icons8.com/color/96/artificial-intelligence.png" alt="" />
+        <h3>Business Automation</h3>
+        <p>AI adoption means using ML and automation to speed up processes, reduce errors, and drive decisions.</p>
+      </article>
+
+      <article class="card">
+        <img src="https://img.icons8.com/color/96/computer-support.png" alt="" />
+        <h3>Intelligent Decisions</h3>
+        <p>Using data-driven models to predict, optimize and personalize experiences at scale.</p>
+      </article>
+
+      <article class="card">
+        <img src="https://img.icons8.com/color/96/innovation.png" alt="" />
+        <h3>New Products & Services</h3>
+        <p>AI enables new capabilities such as recommendation engines, computer vision, and predictive maintenance.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CAUSES -->
+  <section id="causes" class="section">
+    <h2>Why Companies Struggle to Find AI Talent</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Data Science Skills Shortage</h3>
+        <p>Few professionals combine advanced statistics, data engineering and business context.</p>
+      </article>
+      <article class="card">
+        <h3>Machine Learning Expertise Gap</h3>
+        <p>Production-ready ML engineering, model tuning and reproducible pipelines are rare skills.</p>
+      </article>
+      <article class="card">
+        <h3>MLOps & Deployment</h3>
+        <p>Deploying, monitoring and scaling models in production requires specialist operational skills.</p>
+      </article>
+      <article class="card">
+        <h3>AI Ethics & Governance</h3>
+        <p>Trustworthy AI requires ethics, bias auditing and privacy expertise that companies often lack.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section id="impact" class="section section-contrast">
+    <h2>Challenges Caused by the Shortage</h2>
+    <div class="grid">
+      <article class="card">Project delays & missed timelines</article>
+      <article class="card">Rising hiring costs & vendor dependence</article>
+      <article class="card">Limited innovation & product scope</article>
+      <article class="card">Operational risks & maintenance issues</article>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS -->
+  <section id="solutions" class="section">
+    <h2>Possible Solutions</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Upskilling & Reskilling</h3>
+        <p>Bootcamps, in-house training and rotational programs to grow ML skills internally.</p>
+      </article>
+      <article class="card">
+        <h3>University & Certification Programs</h3>
+        <p>Partner with universities and certification bodies to boost pipeline quality.</p>
+      </article>
+      <article class="card">
+        <h3>Online Learning Platforms</h3>
+        <p>Coursera, edX, Udacity and others help quickly reskill engineers.</p>
+      </article>
+      <article class="card">
+        <h3>Industry Partnerships</h3>
+        <p>Collaborate with startups and vendors for MLOps while building internal capability.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CHARTS -->
+  <section id="charts" class="section">
+    <h2>Quick Infographics & Stats</h2>
+
+    <div class="chart-wrap">
+      <canvas id="aiChart" aria-label="Bar chart showing talent shortage by role"></canvas>
+    </div>
+
+    <div class="grid small">
+      <div class="card stat-card">
+        <strong id="stat1">62%</strong>
+        <p>Organisations reporting hiring gaps</p>
+      </div>
+      <div class="card stat-card">
+        <strong id="stat2">40%</strong>
+        <p>Projects delayed by talent shortage</p>
+      </div>
+      <div class="card stat-card">
+        <strong id="stat3">3x</strong>
+        <p>Growth rate of AI job demand vs supply</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY -->
+  <section id="case" class="section section-contrast">
+    <h2>Real Case Study</h2>
+    <article class="card case-card">
+      <h3>Example: Regional Bank — Fraud Detection Pilot</h3>
+      <p>
+        A regional bank delayed an ML fraud-detection rollout by 9 months due to lack of MLOps engineers.
+        Solution: a 12-week internal training program + short-term vendor partnership. Outcome: pilot deployed, fraud detection improved ~18%.
+      </p>
+      <ul>
+        <li>Problem: lack of production ML experience</li>
+        <li>Action: upskilling + MLOps vendor</li>
+        <li>Result: 3-month time-to-value recovered</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz" class="section">
+    <h2>AI Talent Shortage Quiz</h2>
+    <div class="card quiz-card">
+      <form id="quizForm" aria-label="AI knowledge quiz">
+        <ol>
+          <li>
+            <p>Which role is most often in short supply for production AI?</p>
+            <label><input type="radio" name="q1" value="ml" required> Machine Learning Engineer</label><br>
+            <label><input type="radio" name="q1" value="ui"> UI Designer</label>
+          </li>
+
+          <li>
+            <p>Which strategy helps most to grow internal AI capability quickly?</p>
+            <label><input type="radio" name="q2" value="bootcamp" required> Targeted internal bootcamps</label><br>
+            <label><input type="radio" name="q2" value="ignore"> Ignore training</label>
+          </li>
+
+          <li>
+            <p>True or false: Ethics & governance roles are unnecessary for AI production.</p>
+            <label><input type="radio" name="q3" value="false" required> False</label><br>
+            <label><input type="radio" name="q3" value="true"> True</label>
+          </li>
+        </ol>
+
+        <div class="quiz-actions">
+          <button type="submit">Submit Quiz</button>
+          <button type="button" id="quizReset">Reset</button>
+        </div>
+
+        <p id="quizResult" class="muted-text" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2>Contact / Request an Action Plan</h2>
+    <div class="card">
+      <form id="contactForm" novalidate>
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@company.com" required />
+
+        <label for="org">Organization size</label>
+        <select id="org" name="org">
+          <option value="small">&lt;250 employees</option>
+          <option value="mid">250–2000</option>
+          <option value="large">&gt;2000</option>
+        </select>
+
+        <label for="message">Message (what do you need?)</label>
+        <textarea id="message" name="message" rows="4" placeholder="Tell us about your AI priorities..." required></textarea>
+
+        <div class="form-actions">
+          <button type="submit">Send Request</button>
+          <button type="button" id="downloadTemplate">Download 90-day Plan</button>
+        </div>
+
+        <p id="formFeedback" class="muted-text" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <small>© 2025 AI Talent Awareness Project — Educational Demo</small>
+  </footer>
+
+  <!-- Main script -->
+  <script src="script.js" defer></script>
+</body>
+</html>
